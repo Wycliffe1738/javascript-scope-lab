@@ -3,6 +3,11 @@
 let burgers = ["Hamburger", "Cheeseburger"];
 let featuredDrink = "Strawberry Milkshake";
 
+// Function to change the featured drink
+function changeFeaturedDrink() {
+  featuredDrink = "Chocolate Milkshake";
+}
+
 // Function to add a new burger
 function addBurger() {
   // Function-scoped variable
@@ -12,6 +17,10 @@ function addBurger() {
   burgers.push(newBurger);
 }
 
-// Call the function
+// Call the functions
+changeFeaturedDrink();
 addBurger();
-node index.js
+
+// Display the results
+console.log(burgers);
+console.log(featuredDrink);
