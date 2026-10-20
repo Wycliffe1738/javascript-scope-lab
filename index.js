@@ -1,26 +1,23 @@
 
-// Global-scoped variables
+// Step 1: Global-scoped variables
 let burgers = ["Hamburger", "Cheeseburger"];
 let featuredDrink = "Strawberry Milkshake";
 
-// Function to change the featured drink
+// Step 2: Change the featured drink
 function changeFeaturedDrink() {
   featuredDrink = "Chocolate Milkshake";
 }
 
-// Function to add a new burger
+// Step 3: Add a burger using a block-scoped variable
 function addBurger() {
-  // Function-scoped variable
-  var newBurger = "Flatburger";
-
-  // Add the new burger to the array
-  burgers.push(newBurger);
+  {
+    let newBurger = "Flatburger";
+    burgers.push(newBurger);
+  }
 }
 
 // Call the functions
 changeFeaturedDrink();
 addBurger();
-
-// Display the results
 console.log(burgers);
 console.log(featuredDrink);
